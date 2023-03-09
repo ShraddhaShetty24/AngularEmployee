@@ -1,0 +1,9 @@
+1. create new project (ng new projectName)
+2. create components (ng g c componentName)
+3. create service (ng g s serviceName) -import HttpClientModule in app.module.ts
+4. Create a json file of Employee
+5. install json-server (), watch the json server (get the url-fake api)- json-server --watch path_of_json_file
+6. create a constructor for httpClient object (dependency injection)
+7. create methods to pass the urls for crud
+8. call these methods in component.ts file (using service object -dependency injection in constructor)
+9. displaying in html (using structural  directives -ngForm,ngmodel,ngFor)

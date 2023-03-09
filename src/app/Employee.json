@@ -1,0 +1,39 @@
+{
+  "Employee": [
+    {
+      "id": 2,
+      "name": "Nirmana",
+      "address": "Mantralaya",
+      "phone": "8908876547",
+      "country": "India"
+    },
+    {
+      "id": 3,
+      "name": "Arshia Sharma",
+      "address": "Udupi",
+      "phone": "8909876543",
+      "country": "India"
+    },
+    {
+      "id": 4,
+      "name": "Shraddha Shetty",
+      "address": "'SHRIGANESH',Udupi",
+      "phone": "9972353318",
+      "country": "India"
+    },
+    {
+      "id": 5,
+      "name": "Mantra",
+      "address": "NewYork",
+      "phone": "7890987654",
+      "country": "India"
+    },
+    {
+      "id": 6,
+      "name": "Ananya",
+      "address": "Kundapura",
+      "phone": "9313242426",
+      "country": "India"
+    }
+  ]
+}

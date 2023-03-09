@@ -1,0 +1,112 @@
+<!-- <p>crudform works!</p> -->
+<div style="padding-left: 300px; padding-top: 50px;">
+ <table class="table table-striped table-inverse table-responsive">
+    <thead class="thead-inverse">
+        <tr>
+            <th>EmployeeId</th>
+            <th>EmployeeName</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Country</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let ele of EmployeeList">
+               
+                <td>{{ele.id}}</td>
+                <td>{{ele.name}}</td>
+                <td>{{ele.address}}</td>
+                <td>{{ele.phone}}</td>
+                <td>{{ele.country}}</td>
+                <td><button type="button" class="btn btn-danger" (click)="deleteEmployee(ele.id)">Delete</button></td>
+                <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#updateModalToggle" (click)="getData(ele)">Edit</button></td>
+            </tr>
+          
+        </tbody>
+</table>
+
+<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModalToggle" >Add</button></td>
+
+
+<!--Modal for update(floating form)-->
+<div class="modal fade" id="updateModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalToggleLabel">Update Employee Details</h5>
+         
+        </div>
+        <div class="modal-body">
+        <form ngForm="myForm" (ngSubmit)="updateEmployee()">
+            <div class="form-group">
+                <label for="name">Employee Name</label>
+                <input id="name" class="form-control" type="text" name="name" [(ngModel)]="employee.name">
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input id="address" class="form-control" type="text" name="address" [(ngModel)]="employee.address">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input id="phone" class="form-control" type="tel" name="phone" [(ngModel)]="employee.phone" >
+            </div>
+            <div class="form-group">
+                <label for="country">Country</label>
+                <input id="coutry" class="form-control" type="text" name="country" [(ngModel)]="employee.country">
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Save</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="reset" class="btn btn-primary">Clear</button>
+              </div>
+        </form>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+
+  <!--Modal for add(floating form)-->
+<div class="modal fade" id="addModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalToggleLabel">Add Employee Details</h5>
+         
+        </div>
+        <div class="modal-body">
+        <form ngForm="myForm" (ngSubmit)="createEmployee()">
+            <div class="form-group">
+                <label for="name">Employee Name</label>
+                <input id="name" class="form-control" type="text" name="name" [(ngModel)]="employee.name">
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input id="address" class="form-control" type="text" name="address" [(ngModel)]="employee.address">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input id="phone" class="form-control" type="phone" name="phone" [(ngModel)]="employee.phone">
+            </div>
+            <div class="form-group">
+                <label for="country">Country</label>
+                <input id="coutry" class="form-control" type="text" name="country" [(ngModel)]="employee.country">
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" [disabled]="!employee.name" [disabled]="!employee.address" [disabled]="!employee.country" [disabled]="!employee.phone">Save</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+        </form>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+
+
+
+

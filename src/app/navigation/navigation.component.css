@@ -1,0 +1,38 @@
+nav {
+    padding-top: 40px;
+    background-color: #aeabab; 
+    overflow: hidden; 
+    /* height:100%;*/
+    position: fixed;
+    height: 100%;
+    width: 200px;
+} 
+ 
+nav a{
+    color: black;
+}
+ul{
+    /* padding: 60px; */
+    /*to not to display the bullet points*/
+    list-style-type: none;
+}
+li{
+   
+    padding-left: 5px; 
+    align-items: center;
+} 
+
+nav a {
+   /* float: left;*/  
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+ul{
+    padding: 10px;
+    height: 200px;
+}
+li{
+    padding: 10px;
+}
